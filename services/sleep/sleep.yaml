@@ -4,6 +4,9 @@ kind: TerraForm
 inputs:
   - DURATION
 
+outputs:
+  = hostname
+  
 module:
   source: github.com/amiros89/terraform-modules/terraform/sleep
 
