@@ -1,9 +1,6 @@
 spec_version: 1
 kind: TerraForm
 
-inputs:
-  - DURATION
-
 outputs:
   - test
 
