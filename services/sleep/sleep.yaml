@@ -5,8 +5,8 @@ inputs:
   - DURATION
 
 outputs:
-  = hostname
-  
+  - hostname
+
 module:
   source: github.com/amiros89/terraform-modules/terraform/sleep
 
