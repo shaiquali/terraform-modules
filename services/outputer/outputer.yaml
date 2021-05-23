@@ -9,10 +9,10 @@ module:
 
 terraform_version: 0.11.11
 
-variables:
-  # var_file: terraform.tfvars  #optional
-  values:
-    - DURATION: $DURATION
+# variables:
+#   # var_file: terraform.tfvars  #optional
+#   values:
+#     - DURATION: $DURATION
 
 permissions:  #optional
   aws:
