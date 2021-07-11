@@ -1,0 +1,23 @@
+spec_version: 1
+
+kind: blueprint
+environmentType: sandbox
+
+metadata:
+  description:
+    blueprint with mongodb
+
+clouds:
+  - AWS: eu-west-1
+
+artifacts:
+  - Amir-mongodb: amir-artifacts/artifacts/test-data/test-data-db.tar
+
+applications:
+  - Amir-mongodb:
+      target: Amir-VM
+      input_values:
+        - AWS_INSTANCE_TYPE: t2.small
+    
+debugging:
+  direct_access: on 
