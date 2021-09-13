@@ -9,10 +9,4 @@ resource "aws_ssm_parameter" "foo" {
   name  = "foo121"
   type  = "String"
   value = "bar12"
-
-  tags = {
-    "APPID" = "test"
-    "APPLICATION_OWNER" = "hghg"
-    "APPLICATION_NAME" = "dnfgd"
-  }
 }
