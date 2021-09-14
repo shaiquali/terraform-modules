@@ -10,13 +10,9 @@ resource "aws_ssm_parameter" "foo" {
   type  = "String"
   value = "bar12"
 
-  tags = "${merge(
+  tags = merge(
     local.common_tags,
-    map(
-      "Name", "awesome-app-server",
-      "Role", "server"
-    )
-  )}"
+  )
 }
 
 locals {
