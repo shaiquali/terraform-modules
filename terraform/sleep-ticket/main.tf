@@ -10,9 +10,18 @@ resource "aws_ssm_parameter" "foo" {
   type  = "String"
   value = "bar12"
 
-  tags = {
-    "APPID" = "test"
-    "APPLICATION OWNER" = "hghg"
-    "APPLICATION NAME" = "dnfgd"
+  tags = merge(
+    local.common_tags,
+    {
+      "APPID" = "test"
+    },
+  )
+}
+
+locals {
+  # Common tags to be assigned to all resources
+  common_tags = {
+    Service = local.service_name
+    Owner   = local.owner
   }
 }
