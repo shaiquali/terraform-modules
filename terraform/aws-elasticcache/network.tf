@@ -8,9 +8,6 @@ data "aws_vpc" "default" {
 
 data "aws_subnet_ids" "apps_subnets" {
   vpc_id = "vpc-0e1b62433c0c81943"
-  tags = {
-    Name = "app-subnet*"
-  }
 }
 
 resource "aws_elasticache_subnet_group" "elasticache-subnet" {
