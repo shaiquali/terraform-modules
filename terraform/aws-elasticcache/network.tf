@@ -7,10 +7,10 @@ data "aws_vpc" "default" {
 }
 
 data "aws_subnet_ids" "apps_subnets" {
-  vpc_id = "vpc-0e1b62433c0c81943"
+  vpc_id = "vpc-0e1b62433c0c81943"  
 }
 
 resource "aws_elasticache_subnet_group" "elasticache-subnet" {
   name       = "elasticache-subnet"
-  subnet_ids = [data.aws_subnet_ids.apps_subnets.id]
+  subnet_ids = [aws_subnet_ids.apps_subnets.id]
 }
