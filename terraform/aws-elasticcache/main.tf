@@ -5,7 +5,7 @@ resource "aws_elasticache_cluster" "example" {
   num_cache_nodes      = 1
   parameter_group_name = "default.redis3.2"
   subnet_group_name    = "${aws_elasticache_subnet_group.elasticache-subnet.name}"
-  security_group_ids   = ["elasticache-sg"]
+  security_group_ids   = ["${aws_security_group.elasticache-sg.id}"]
   engine_version       = "3.2.10"
   port                 = 6379
 }
