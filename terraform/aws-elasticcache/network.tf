@@ -12,5 +12,5 @@ data "aws_subnet_ids" "apps_subnets" {
 
 resource "aws_elasticache_subnet_group" "elasticache-subnet" {
   name       = "elasticache-subnet"
-  subnet_ids = ["${data.aws_subnet_ids.apps_subnets.ids}"]
+  subnet_ids = ["${data.aws_subnet_ids.apps_subnets.*.id}"]
 }
