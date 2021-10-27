@@ -44,7 +44,7 @@ resource "aws_route_table_association" "b" {
   route_table_id = aws_route_table.all.id
 }
 
-resource "aws_elasticache_subnet_group" "elasticache_subnet" {
-  name       = "elasticache_subnet"
+resource "aws_elasticache_subnet_group" "elasticache-subnet" {
+  name       = "elasticache-subnet"
   subnet_ids = [aws_subnet.a.id]
 }
