@@ -3,11 +3,11 @@ provider "aws" {
 }
 
 data "aws_vpc" "default" {
-  id = "vpc-0e1b62433c0c81943"
+  id = var.eks_vpc
 }
 
 data "aws_subnet_ids" "apps_subnets" {
-  vpc_id = "vpc-0e1b62433c0c81943"  
+  vpc_id = var.eks_vpc 
 }
 
 resource "aws_elasticache_subnet_group" "elasticache-subnet" {
