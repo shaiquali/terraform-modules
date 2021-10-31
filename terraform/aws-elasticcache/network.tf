@@ -10,6 +10,11 @@ data "aws_subnet_ids" "apps_subnets" {
   vpc_id = var.eks_vpc 
 }
 
+resource "aws_db_subnet_group" "rds" {
+  name = "rds-${var.sandbox_id}-subnet-group"
+  subnet_ids = [aws_subnet.a.id,aws_subnet.b.id]
+}
+
 resource "aws_elasticache_subnet_group" "elasticache-subnet" {
   name       = "elasticache-subnet"
   subnet_ids = data.aws_subnet_ids.apps_subnets.ids
