@@ -5,3 +5,7 @@ output "hostname" {
 output "vpc" {
   value = var.eks_vpc
 }
+
+output "postgres_hostname" {
+  value = aws_db_instance.default.endpoint
+}
