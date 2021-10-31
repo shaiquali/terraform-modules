@@ -15,6 +15,10 @@ resource "aws_db_subnet_group" "rds" {
   subnet_ids = [aws_subnet.a.id,aws_subnet.b.id]
 }
 
+resource "aws_db_parameter_group" "default" {
+  name   = "rds-pg"
+  family = "mysql5.6"
+
 resource "aws_elasticache_subnet_group" "elasticache-subnet" {
   name       = "elasticache-subnet"
   subnet_ids = data.aws_subnet_ids.apps_subnets.ids
