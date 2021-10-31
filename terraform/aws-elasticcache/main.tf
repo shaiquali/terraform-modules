@@ -20,7 +20,7 @@ resource "aws_db_instance" "default" {
   name                 = "${var.db_name}"
   username             = "${var.username}"
   password             = "${var.password}"
-  parameter_group_name = "default.rds-pg"
+  parameter_group_name = "default.postgres13"
   db_subnet_group_name = "${aws_db_subnet_group.rds.id}"
   vpc_security_group_ids    = ["${aws_security_group.rds.id}"]
   skip_final_snapshot       = true
