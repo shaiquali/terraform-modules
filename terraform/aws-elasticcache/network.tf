@@ -18,6 +18,7 @@ resource "aws_db_subnet_group" "rds" {
 resource "aws_db_parameter_group" "default" {
   name   = "rds-pg"
   family = "mysql5.6"
+}
 
 resource "aws_elasticache_subnet_group" "elasticache-subnet" {
   name       = "elasticache-subnet"
