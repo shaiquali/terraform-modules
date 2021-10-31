@@ -15,7 +15,7 @@ resource "aws_db_instance" "default" {
   storage_type         = "gp2"
   engine               = "postgres"
   engine_version       = "13.4"
-  instance_class       = "db.t2.medium"
+  instance_class       = "db.t3.medium"
   identifier           = "rds-${var.sandbox_id}"
   name                 = "${var.db_name}"
   username             = "${var.username}"
