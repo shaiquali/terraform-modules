@@ -1,4 +1,4 @@
 variable DURATION {}
 variable "vpc" {
-    value = null
+    default = null
 }
