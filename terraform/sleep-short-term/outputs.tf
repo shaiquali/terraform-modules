@@ -3,13 +3,13 @@ output "hostname" {
 }
 
 output "output1" {
-  value = "test"
+  value = "test1"
 }
 
 output "output2" {
-  value = "test"
+  value = "test2"
 }
 
 output "output3" {
-  value = "test"
+  value = "test3"
 }
