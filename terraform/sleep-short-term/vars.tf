@@ -1,4 +1,4 @@
 variable DURATION {}
 variable "vpc" {
-    default = null
+    default = $torque.environment.id
 }
