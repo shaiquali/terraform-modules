@@ -2,6 +2,10 @@ output "hostname" {
   value = "amir"
 }
 
-output "output1" {
+output "int" {
   value = 1
+}
+
+output "string" {
+  value = str
 }
