@@ -7,5 +7,5 @@ output "int" {
 }
 
 output "string" {
-  value = str
+  value = localhost.hostname
 }
