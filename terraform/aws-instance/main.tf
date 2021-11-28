@@ -15,7 +15,7 @@ data "aws_ami" "ubuntu" {
 }
 
 variable "region" {
-  value = "eu-west-1"
+  default = "eu-west-1"
 }
 
 provider "aws" {
